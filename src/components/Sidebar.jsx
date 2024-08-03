@@ -1,30 +1,23 @@
-import { ourPlans } from "../redux/Variables";
+import { sidebarOptions } from "../redux/Variables/LayoutVariables";
+import SidebarOption from "./SidebarOption";
+
 export const Sidebar = () => {
   return (
-    <>
-      <div className="w-[60%]">
-        <span className="">
-          <img className="w-[15rem] h-auto" src="BannerImage.svg" alt="" />
+    <div className="w-[17%] h-full border-[#c3c0c0] border-opacity-25 border-r-[.1rem] bg-white">
+      <div className="h-[12%] flex justify-center items-center gap-2">
+        <span className="w-6 h-auto">
+          <img src="secret.png" alt="" />
         </span>
+        <p>End Secrets</p>
       </div>
-      <div className="w-[60%] flex flex-col gap-3">
-        <div>
-          <h1 className=" text-[1.8rem] font-medium text-[#666666] ">
-            Our plan includes
-          </h1>
-        </div>
-        <ul className="list-disc space-y-2">
-          {ourPlans.map((item) => (
-            <li
-              className="text-[0.85rem] text-[#666666] text-opacity-95"
-              key={item}
-            >
-              {item}
-            </li>
+      <div className="flex justify-center items-center">
+        <div className="mt-10 w-full flex flex-col gap-4">
+          {sidebarOptions.map((item) => (
+            <SidebarOption name={item} key={item} />
           ))}
-        </ul>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Sidebar;

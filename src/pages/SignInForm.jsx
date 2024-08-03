@@ -3,7 +3,7 @@ import LoginBtn from "../components/LoginBtn";
 import LoginFormInputField from "../components/LoginFormInputField";
 import LoginAnotherOption from "../components/LoginAnotherOption";
 import TermsAndConditions from "../components/TermsAndConditions";
-import { signInInputFields } from "../redux/Variables";
+import { signInInputFields } from "../redux/Variables/LoginVariables";
 export const SignInForm = () => {
   const {
     register,

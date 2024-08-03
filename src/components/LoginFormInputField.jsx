@@ -5,7 +5,7 @@ import {
   passwordRequireCheck,
   firstNameRequireCheck,
   lastNameRequireCheck,
-} from "../redux/Variables";
+} from "../redux/Variables/LoginVariables";
 import PasswordVisibilityCheck from "./PasswordVisibilityCheck";
 export const LoginFormInputField = ({ name, register, errors, value }) => {
   const email = name === "Email";

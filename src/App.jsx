@@ -4,16 +4,30 @@ import {
   Navigate,
 } from "react-router-dom";
 import Login from "./pages/Login";
-import SignInForm from "./pages/SignInForm";
-import SignUpForm from "./pages/SignUpForm";
+import Layout from "./pages/Layout";
+import ProtectedRoute from "./pages/ProtectedRoute";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import Feed from "./pages/Feed";
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/login",
     element: <Login />,
+  },
+  {
+    path: "",
+    element: <ProtectedRoute />,
     children: [
-      { path: "", element: <Navigate to="/login" /> },
-      { path: "/login", element: <SignInForm /> },
-      { path: "/signup", element: <SignUpForm /> },
+      {
+        path: "",
+        element: <Layout />,
+        children: [
+          { path: "", element: <Navigate to={"/profile"} /> },
+          { path: "/profile", element: <Profile /> },
+          { path: "/feed", element: <Feed /> },
+          { path: "/settings", element: <Settings /> },
+        ],
+      },
     ],
   },
 ]);

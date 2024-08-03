@@ -1,21 +1,27 @@
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import {
   signupAsAnotherOption,
   singinAsAnotherOption,
-} from "../redux/Variables";
+} from "../redux/Variables/LoginVariables";
+import { StatusChanger } from "../redux/Features/LoginSlice";
 export const LoginAnotherOption = ({ value }) => {
-  const Login = value === "Login";
+  const dispatch = useDispatch();
+  const login = value === "Login";
+  const StatusChangeHandler = () => {
+    login ? dispatch(StatusChanger(1)) : dispatch(StatusChanger(0));
+  };
   return (
     <div className="flex items-center justify-center text-[0.87rem] text-[#333333] my-2 ">
       <div className="flex flex-row justify-center items-center gap-1">
         <p>
-          {Login ? signupAsAnotherOption.text : singinAsAnotherOption.text}{" "}
+          {login ? signupAsAnotherOption.text : singinAsAnotherOption.text}{" "}
         </p>
-        <Link to={Login ? "/signup" : "/login"}>
-          <span className="font-bold cursor-pointer">
-            {Login ? signupAsAnotherOption.btn : singinAsAnotherOption.btn}
-          </span>
-        </Link>
+        <span
+          onClick={StatusChangeHandler}
+          className="font-bold cursor-pointer"
+        >
+          {login ? signupAsAnotherOption.btn : singinAsAnotherOption.btn}
+        </span>
       </div>
     </div>
   );
