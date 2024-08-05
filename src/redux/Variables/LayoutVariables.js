@@ -1,1 +1,1 @@
-export const sidebarOptions = ["Profile", "Feed", "Settings", "Login"];
+export const sidebarOptions = ["Trustees", "Feed", "Settings", "Login"];

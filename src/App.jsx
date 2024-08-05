@@ -6,7 +6,7 @@ import {
 import Login from "./pages/Login";
 import Layout from "./pages/Layout";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import Profile from "./pages/Profile";
+import Trustees from "./pages/Trustees";
 import Settings from "./pages/Settings";
 import Feed from "./pages/Feed";
 const router = createBrowserRouter([
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         path: "",
         element: <Layout />,
         children: [
-          { path: "", element: <Navigate to={"/profile"} /> },
-          { path: "/profile", element: <Profile /> },
+          { path: "", element: <Navigate to={"/trustees"} /> },
+          { path: "/trustees", element: <Trustees /> },
           { path: "/feed", element: <Feed /> },
           { path: "/settings", element: <Settings /> },
         ],

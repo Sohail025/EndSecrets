@@ -5,9 +5,8 @@ export const Layout = () => {
   return (
     <div className="flex flex-row w-screen h-screen font-[Inter]">
       <Sidebar />
-      <div className="flex flex-col w-[83%] ">
-        <Navbar />
-        <div className="bg-[#718EBF] h-[88%] bg-opacity-5">
+      <div className="flex flex-col w-[84%] ">
+        <div className="bg-[#718EBF] bg-opacity-5">
           <Outlet />
         </div>
       </div>

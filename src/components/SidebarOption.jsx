@@ -1,27 +1,22 @@
-import { Inventory } from "@mui/icons-material";
+import { Inventory, Style } from "@mui/icons-material";
 import useCurrentRoute from "../Hooks/useCurrentRoute";
 import { Link } from "react-router-dom";
+import { SidebarBtn } from "../Theme/CustomButtons";
+import theme from "../Theme/theme";
 export const SidebarOption = ({ name }) => {
   const [Header] = useCurrentRoute();
-  const profile = name === "Profile";
+  const activeOption = Header === name;
+  const profile = name === "Trustees";
   const feed = name === "Feed";
   const login = name === "Login";
-
   return (
     <div className="flex flex-row gap-2 font-[Poppins]">
-      <div
-        className={` ${
-          Header === name
-            ? "border-[#2a2b2c] border-opacity-40 border-solid rounded-tr rounded-br border-l-[0.35rem]"
-            : "border-white border-solid rounded-tr rounded-br border-l-[0.35rem]"
-        }`}
-      ></div>
-      <div className="flex px-2 font-extralight items-center w-[90%]">
+      <div className="flex px-2 font-extralight">
         <Link
           className="w-full"
           to={
             profile
-              ? "/profile"
+              ? "/trustees"
               : feed
               ? "/feed"
               : login
@@ -29,16 +24,13 @@ export const SidebarOption = ({ name }) => {
               : "/settings"
           }
         >
-          <div
-            className={`flex flex-row items-center gap-2 px-3 rounded-[0.55rem] w-full cursor-pointer hover:bg-[#404143] hover:bg-opacity-5 ${
-              name === Header && "bg-[#404143] bg-opacity-5"
-            }`}
+          <SidebarBtn
+            startIcon={<Inventory />}
+            variant={activeOption && "contained"}
+            style={{ color: activeOption && theme.palette.primary.dark }}
           >
-            <Inventory style={{ color: "#6c6f75" }} />
-            <span className="text-[#373c41] hover:text-[#2a2b2c] font-medium py-2 w-full ">
-              {name}
-            </span>
-          </div>
+            {name}
+          </SidebarBtn>
         </Link>
       </div>
     </div>

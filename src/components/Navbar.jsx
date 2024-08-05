@@ -9,7 +9,7 @@ export const Navbar = () => {
   const [Header] = useCurrentRoute();
   return (
     <>
-      <div className="h-[12%] w-full bg-white flex items-center text-[1.4rem] font-semibold">
+      <div className="h-[11%] w-full bg-white flex items-center text-[1.4rem] font-semibold">
         <div className="mx-6 flex flex-row justify-between w-full">
           <p className="text-[#2c2d2d] text-opacity-70">{Header}</p>
 

@@ -1,0 +1,79 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "After-age",
+    "collectionId": "95c95474-2e00-4bf5-9c89-508436855a54",
+    "dateExported": "2024-08-04T13:00:09.075Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f0b617a2-1231-4bac-9866-6964f4dc8aa0",
+            "colId": "95c95474-2e00-4bf5-9c89-508436855a54",
+            "containerId": "",
+            "name": "Register",
+            "url": "{{after-age-base}}/api/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-31T15:58:59.228Z",
+            "modified": "2024-07-31T16:29:09.139Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\": \"Bilal\",\n  \"last_name\": \"Ashraf\",\n  \"email\": \"bilalashraf6233@gmail.com\",\n  \"password\": \"Nokiac101\",\n  \"age\": \"1995-01-01\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2b0ad580-4713-4b02-96f8-37ec3212c802",
+            "colId": "95c95474-2e00-4bf5-9c89-508436855a54",
+            "containerId": "",
+            "name": "Verify Token",
+            "url": "{{after-age-base}}/api/auth/verify-token?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImVtYWlsIjoiYmlsYWxhc2hyYWY2MjMzQGdtYWlsLmNvbSIsImlhdCI6MTcyMjUzMTMwMywiZXhwIjoxNzIyNTMxOTAzfQ.wyN-l82fUf1gzDjhb86ZwpAxHEWloTOJ9FMLW6xgEM8",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-01T09:33:28.791Z",
+            "modified": "2024-08-01T16:56:11.285Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "t",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImVtYWlsIjoiYmlsYWxhc2hyYWY2MjMzQGdtYWlsLmNvbSIsImlhdCI6MTcyMjUzMTMwMywiZXhwIjoxNzIyNTMxOTAzfQ.wyN-l82fUf1gzDjhb86ZwpAxHEWloTOJ9FMLW6xgEM8",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "9fdedfe7-28d0-4769-adee-06a747abd3da",
+            "colId": "95c95474-2e00-4bf5-9c89-508436855a54",
+            "containerId": "",
+            "name": "Login",
+            "url": "{{after-age-base}}/api/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-01T14:49:41.246Z",
+            "modified": "2024-08-01T14:50:59.191Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"bilalashraf6233@gmail.com\",\n  \"password\": \"Nokiac101\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "_gOwEQTl1jrDEyYI1wmAYZmsi6XuxjKj9DvpoL80UoM6jEQ3fXbH-RunXsQ_LI-TXH8YVwfdb1A0vEmMZzUsIQ"
+}
